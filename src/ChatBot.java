@@ -28,13 +28,21 @@ public class ChatBot {
         return METERS_PER_FOOT * numFeet;
     }
 
+    public double convertMetersToFeet(int numMeters) {
+        final double FOOT_PER_METER = 3.28084;
+        return FOOT_PER_METER * numMeters;
+    }
+
     // method that prints information about favorite numbers
     public void favoriteNumber(int yourNumber) {
         int distance = yourNumber - number;  // number is an instance variable
         System.out.println("My favorite number is " + number);
         System.out.println("That is " + distance + " away from your number!");
     }
-
+    public void favoriteFood(String yourFood) {
+        System.out.print("My favorite food is pizza");
+        System.out.println(" which is way way better than " + yourFood + "!");
+    }
     // method that adds and returns the sum of three numbers
     public int addNumbers(int num1, int num2, int num3) {
         return num1 + num2 + num3;
@@ -44,6 +52,4 @@ public class ChatBot {
     public String goodbye() {
         return "It was nice talking with you! Have a great day! Sincerely, " + name;
     }
-
-    public void favorite
 }
